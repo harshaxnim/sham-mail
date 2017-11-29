@@ -1,0 +1,52 @@
+Nov 21 12:16:39 home postfix/smtpd[21921]: connect from unknown[unknown]
+Nov 21 12:16:39 home postfix/smtpd[21921]: lost connection after CONNECT from unknown[unknown]
+Nov 21 12:16:39 home postfix/smtpd[21921]: disconnect from unknown[unknown] commands=0/0
+Nov 21 12:16:45 home postfix/smtpd[21921]: connect from localhost[127.0.0.1]
+Nov 21 12:16:45 home postfix/smtpd[21921]: lost connection after CONNECT from localhost[127.0.0.1]
+Nov 21 12:16:45 home postfix/smtpd[21921]: disconnect from localhost[127.0.0.1] commands=0/0
+Nov 21 12:16:53 home postfix/smtpd[21921]: connect from unknown[unknown]
+Nov 21 12:16:53 home postfix/smtpd[21921]: lost connection after CONNECT from unknown[unknown]
+Nov 21 12:16:53 home postfix/smtpd[21921]: disconnect from unknown[unknown] commands=0/0
+Nov 21 12:20:13 home postfix/anvil[21924]: statistics: max connection rate 2/60s for (smtp:unknown) at Nov 21 12:16:53
+Nov 21 12:20:13 home postfix/anvil[21924]: statistics: max connection count 1 for (smtp:unknown) at Nov 21 12:16:39
+Nov 21 12:20:13 home postfix/anvil[21924]: statistics: max cache size 1 at Nov 21 12:16:39
+Nov 25 18:14:16 home postfix/smtpd[2516]: connect from localhost[::1]
+Nov 25 18:14:16 home postfix/smtpd[2516]: D99B03E6A5: client=localhost[::1]
+Nov 25 18:14:16 home postfix/cleanup[2519]: D99B03E6A5: message-id=<20171125181416.D99B03E6A5@home.inspirho.in>
+Nov 25 18:14:16 home postfix/qmgr[21550]: D99B03E6A5: from=<harshav2@in.ibm.com>, size=472, nrcpt=1 (queue active)
+Nov 25 18:14:16 home postfix/smtpd[2516]: disconnect from localhost[::1] ehlo=1 mail=1 rcpt=1 data=1 quit=1 commands=5
+Nov 25 18:14:17 home postfix/smtp[2520]: D99B03E6A5: to=<aditya@avinetworks.com>, relay=ASPMX.L.GOOGLE.com[2a00:1450:400c:c09::1a]:25, delay=0.73, delays=0.01/0.02/0.08/0.62, dsn=5.7.1, status=bounced (host ASPMX.L.GOOGLE.com[2a00:1450:400c:c09::1a] said: 550-5.7.1 [2a01:7e00::f03c:91ff:feac:4d29] Our system has detected that this 550-5.7.1 message does not meet IPv6 sending guidelines regarding PTR records 550-5.7.1 and authentication. Please review 550-5.7.1  https://support.google.com/mail/?p=IPv6AuthError for more information 550 5.7.1 . j6si13801943wrh.315 - gsmtp (in reply to end of DATA command))
+Nov 25 18:14:17 home postfix/cleanup[2519]: 9BD473E6A8: message-id=<20171125181417.9BD473E6A8@home.inspirho.in>
+Nov 25 18:14:17 home postfix/qmgr[21550]: 9BD473E6A8: from=<>, size=3011, nrcpt=1 (queue active)
+Nov 25 18:14:17 home postfix/bounce[2521]: D99B03E6A5: sender non-delivery notification: 9BD473E6A8
+Nov 25 18:14:17 home postfix/qmgr[21550]: D99B03E6A5: removed
+Nov 25 18:14:18 home postfix/smtp[2520]: 9BD473E6A8: host mx0b-001b2d01.pphosted.com[148.163.158.5] refused to talk to me: 421 Deferred - see https://ipcheck.proofpoint.com/?ip=176.58.125.183
+Nov 25 18:14:18 home postfix/smtp[2520]: 9BD473E6A8: to=<harshav2@in.ibm.com>, relay=mx0a-001b2d01.pphosted.com[148.163.156.1]:25, delay=1.2, delays=0/0/1.2/0, dsn=4.0.0, status=deferred (host mx0a-001b2d01.pphosted.com[148.163.156.1] refused to talk to me: 421 Deferred - see https://ipcheck.proofpoint.com/?ip=176.58.125.183)
+Nov 25 18:15:03 home postfix/smtpd[2516]: connect from localhost[::1]
+Nov 25 18:15:03 home postfix/smtpd[2516]: 3EC713E6AA: client=localhost[::1]
+Nov 25 18:15:03 home postfix/cleanup[2519]: 3EC713E6AA: message-id=<20171125181503.3EC713E6AA@home.inspirho.in>
+Nov 25 18:15:03 home postfix/qmgr[21550]: 3EC713E6AA: from=<harshav2@in.ibm.com>, size=472, nrcpt=1 (queue active)
+Nov 25 18:15:03 home postfix/smtpd[2516]: disconnect from localhost[::1] ehlo=1 mail=1 rcpt=1 data=1 quit=1 commands=5
+Nov 25 18:15:03 home postfix/smtp[2520]: 3EC713E6AA: to=<aditya@avinetworks.com>, relay=ASPMX.L.GOOGLE.com[74.125.133.26]:25, delay=0.37, delays=0.01/0/0.17/0.19, dsn=2.0.0, status=sent (250 2.0.0 OK 1511633703 a5si9014377wmi.200 - gsmtp)
+Nov 25 18:15:03 home postfix/qmgr[21550]: 3EC713E6AA: removed
+Nov 25 18:22:56 home postfix/qmgr[21550]: 9BD473E6A8: from=<>, size=3011, nrcpt=1 (queue active)
+Nov 25 18:22:57 home postfix/smtp[2541]: 9BD473E6A8: host mx0a-001b2d01.pphosted.com[148.163.156.1] refused to talk to me: 421 Deferred - see https://ipcheck.proofpoint.com/?ip=176.58.125.183
+Nov 25 18:22:57 home postfix/smtp[2541]: 9BD473E6A8: to=<harshav2@in.ibm.com>, relay=mx0b-001b2d01.pphosted.com[148.163.158.5]:25, delay=520, delays=519/0.01/0.63/0, dsn=4.0.0, status=deferred (host mx0b-001b2d01.pphosted.com[148.163.158.5] refused to talk to me: 421 Deferred - see https://ipcheck.proofpoint.com/?ip=176.58.125.183)
+Nov 25 18:31:35 home postfix/smtpd[2552]: connect from localhost[::1]
+Nov 25 18:31:35 home postfix/smtpd[2552]: E499F3E6AA: client=localhost[::1]
+Nov 25 18:31:35 home postfix/cleanup[2555]: E499F3E6AA: message-id=<20171125183135.E499F3E6AA@home.inspirho.in>
+Nov 25 18:31:35 home postfix/qmgr[21550]: E499F3E6AA: from=<harshav2@in.ibm.com>, size=472, nrcpt=1 (queue active)
+Nov 25 18:31:35 home postfix/smtpd[2552]: disconnect from localhost[::1] ehlo=1 mail=1 rcpt=1 data=1 quit=1 commands=5
+Nov 25 18:31:36 home postfix/smtp[2556]: E499F3E6AA: to=<aditya@avinetworks.com>, relay=ASPMX.L.GOOGLE.com[64.233.167.26]:25, delay=0.37, delays=0.01/0.01/0.04/0.31, dsn=2.0.0, status=sent (250 2.0.0 OK 1511634696 b63si8702584wmc.25 - gsmtp)
+Nov 25 18:31:36 home postfix/qmgr[21550]: E499F3E6AA: removed
+Nov 25 18:32:56 home postfix/qmgr[21550]: 9BD473E6A8: from=<>, size=3011, nrcpt=1 (queue active)
+Nov 25 18:32:56 home postfix/smtp[2556]: 9BD473E6A8: host mx0a-001b2d01.pphosted.com[148.163.156.1] refused to talk to me: 421 Deferred - see https://ipcheck.proofpoint.com/?ip=176.58.125.183
+Nov 25 18:32:57 home postfix/smtp[2556]: 9BD473E6A8: to=<harshav2@in.ibm.com>, relay=mx0b-001b2d01.pphosted.com[148.163.158.5]:25, delay=1120, delays=1119/0/0.77/0.51, dsn=2.0.0, status=sent (250 2.0.0 2ef59my497-1 Message accepted for delivery)
+Nov 25 18:32:57 home postfix/qmgr[21550]: 9BD473E6A8: removed
+Nov 25 18:38:25 home postfix/smtpd[2566]: connect from localhost[::1]
+Nov 25 18:38:26 home postfix/smtpd[2566]: 1B9323E6A6: client=localhost[::1]
+Nov 25 18:38:26 home postfix/cleanup[2569]: 1B9323E6A6: message-id=<151163510593.2565.10039749407327351130@li548-183.members.linode.com>
+Nov 25 18:38:26 home postfix/qmgr[21550]: 1B9323E6A6: from=<harshav2@in.ibm.com>, size=497, nrcpt=1 (queue active)
+Nov 25 18:38:26 home postfix/smtpd[2566]: disconnect from localhost[::1] ehlo=1 mail=1 rcpt=1 data=1 quit=1 commands=5
+Nov 25 18:38:26 home postfix/smtp[2570]: 1B9323E6A6: to=<aditya@avinetworks.com>, relay=ASPMX.L.GOOGLE.com[64.233.166.27]:25, delay=0.28, delays=0.01/0.01/0.03/0.23, dsn=2.0.0, status=sent (250 2.0.0 OK 1511635106 64si9290625wms.102 - gsmtp)
+Nov 25 18:38:26 home postfix/qmgr[21550]: 1B9323E6A6: removed

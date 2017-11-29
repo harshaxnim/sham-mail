@@ -1,7 +1,9 @@
 #!/usr/bin/python
 import sys
 import smtplib
+import email.Utils
 from email.mime.text import MIMEText
+
 
 if (len(sys.argv) != 2):
 	print "USAGE: shamMail.py <mail.txt>"
@@ -30,6 +32,7 @@ msg = MIMEText(body)
 msg['Subject'] = subject
 msg['From'] = fromAdd
 msg['To'] = toAdd
+msg["Message-id"] = email.Utils.make_msgid()
 
 print "Printing Mail..."
 print msg
@@ -40,7 +43,7 @@ print "^ Generated MIME Text ^"
 try:
 	print "Sending mail to",toAdd, "from", fromAdd
 	s = smtplib.SMTP('localhost')
-	s.sendmail(fromAdd, [toAdd], msg.as_string())
+	print s.sendmail(fromAdd, [toAdd], msg.as_string())
 except:
 	print "Unable to send mail. I'm bad at logging, so you have to figure out the issue yourself!!"
 finally:
