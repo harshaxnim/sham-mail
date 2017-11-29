@@ -43,7 +43,7 @@ print "^ Generated MIME Text ^"
 try:
 	print "Sending mail to",toAdd, "from", fromAdd
 	s = smtplib.SMTP('localhost')
-	print s.sendmail(fromAdd, [toAdd], msg.as_string())
+	s.sendmail(fromAdd, [toAdd], msg.as_string())
 except:
 	print "Unable to send mail. I'm bad at logging, so you have to figure out the issue yourself!!"
 finally:
