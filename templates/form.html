@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text" rel="stylesheet">
+	<style type="text/css">
+		* {
+			background-color: white;
+		}
+		html, body {
+			height: 100%;
+		}
+
+		html {
+			display: table;
+			margin: auto;
+
+			font-size:110%;
+		}
+		
+		@media(min-width:60em){html{font-size: 90%}}
+		
+		body {
+			display: table-cell;
+			vertical-align: middle;
+
+
+		}
+		input {
+			border: none;
+			border-bottom: 1px dotted gray;
+			
+			padding:10px;
+			font-size:16px;
+			font-family:'Barlow Condensed';
+		}
+		*:focus{
+			outline: none;
+		}
+		textarea {
+			outline: none;
+			border: none;
+			border-right: 1px dotted gray;
+			border-bottom: 1px dotted gray;
+
+			padding:5px;
+			font-size:16px;
+			font-family:'Barlow Condensed';
+		}
+	</style>
+</head>
+
+<body style="font-family: 'Barlow Condensed', cursive;">
+
+<p align="center" style="font-family: 'Libre Barcode 39 Text', cursive; font-size: 50px;"> SHAMMAIL </p>
+
+<form action="/signup" method="post" align="center">
+  From<br><input type="email" name="from" required></input><br><br><br>
+  To<br><input type="email" name="to" required`></input><br><br><br>
+  Body<br><textarea rows="4" cols="50" type="text" name="body"></textarea><br><br><br>
+  <input type="submit" value="Send"></input>
+</form>
+
+
+</body>
+</html>
