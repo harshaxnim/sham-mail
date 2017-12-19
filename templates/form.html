@@ -2,65 +2,36 @@
 <html>
 
 <head>
-	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text" rel="stylesheet">
-	<style type="text/css">
-		* {
-			background-color: white;
-		}
-		html, body {
-			height: 100%;
-		}
-
-		html {
-			display: table;
-			margin: auto;
-
-			font-size:110%;
-		}
-		
-		@media(min-width:60em){html{font-size: 90%}}
-		
-		body {
-			display: table-cell;
-			vertical-align: middle;
-
-
-		}
-		input {
-			border: none;
-			border-bottom: 1px dotted gray;
-			
-			padding:10px;
-			font-size:16px;
-			font-family:'Barlow Condensed';
-		}
-		*:focus{
-			outline: none;
-		}
-		textarea {
-			outline: none;
-			border: none;
-			border-right: 1px dotted gray;
-			border-bottom: 1px dotted gray;
-
-			padding:5px;
-			font-size:16px;
-			font-family:'Barlow Condensed';
-		}
-	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="/static/">
+	
+	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Libre+Barcode+39+Text" rel="stylesheet">
+	
+	<link href="/static/all.css" rel="stylesheet">
 </head>
 
-<body style="font-family: 'Barlow Condensed', cursive;">
+<body class="parent">
 
-<p align="center" style="font-family: 'Libre Barcode 39 Text', cursive; font-size: 50px;"> SHAMMAIL </p>
+<div class="child">
 
-<form action="/sendmail" method="post" align="center">
-  From<br><input type="email" name="from" required value="asdf@asdf"></input><br><br><br>
-  To<br><input type="email" name="to" required value="asdf@asdf"></input><br><br><br>
-  Body<br><textarea rows="4" cols="50" type="text" name="body">hi, how're you doing!</textarea><br><br><br>
-  <input type="submit" value="Send"></input>
-</form>
+
+	<div>
+		<h1 align="center" class="title">SHAM-MAIL</h1>
+	</div>
+
+
+	<div align="center">
+		<form action="/sendmail" method="post">
+			<b>From</b><br><input class="input_field" type="email" name="from" required value="from@example.com"></input><br><br><br>
+			<b>To</b><br><input class="input_field" type="email" name="to" required value="to@example.com"></input><br><br><br>
+			<b>Body</b><br><textarea class="input_field text_area" rows="4" cols="40" type="text" name="body">Hi,
+How're you doing?!</textarea><br><br><br>
+			<input type="submit" value="Send"></input>
+		</form>
+	</div>
+
+
+</div>
 
 
 </body>
